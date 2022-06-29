@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card" >
-                    <div class="card-header" style="background-color: #d010ae">
+                    <div class="card-header" style="background-color: #e0154e">
                         <h2 class="text-center" style="color: #ffffff">
                             {{ __('اضافة منتج') }}
                         </h2>
@@ -66,7 +66,7 @@
                                             <select name="category_id" id="category_id" class="form-control" required>
                                                 <option value="" class="text-center">--- اختر صنف ---</option>
                                                 @foreach ($categories as $category)
-                                                    <option class="text-center" value="{{ $category->id }}">"{{ $category->name }}"</option>">
+                                                    <option class="text-center" value="{{ $category->id }}">"{{ $category->category_name }}"</option>">
                                                 @endforeach
                                             </select>
 {{--                                            <input id="category" type="" class="form-control @error('category') is-invalid @enderror" name="category" required>--}}

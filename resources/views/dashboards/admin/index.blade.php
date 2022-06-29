@@ -24,7 +24,7 @@
                             <div class="card">
                                     <div class="text-center">
                                     <img src="{{ asset('images/add-product.png') }}" class="card-img-top" style="width: 100px;height: 100px;" alt="home">
-                                        <h4 class="p-4 card-body" style="color: #ffff;background-color: #d010ae">{{ __('اضافة المنتجات') }}</h4>
+                                        <h4 class="p-4 card-body" style="color: #ffff;background-color: #e0154e">{{ __('اضافة المنتجات') }}</h4>
                                     </div>
                                 </div>
                             </a>
@@ -55,7 +55,7 @@
                             <div class="card">
                                 <div class="text-center">
                                     <img src="{{ asset('images/users.png') }}" class="card-img-top" style="width: 100px;height: 100px;" alt="home">
-                                        <h4 class="p-4 card-body" style="color: #ffff;background-color: #e0154e">{{ __('عرض المستخدمين') }}</h4>
+                                        <h4 class="p-4 card-body" style="color: #ffff;background-color: #fd7e14">{{ __('عرض المستخدمين') }}</h4>
                                 </div>
                             </div>
                             </a>
@@ -71,17 +71,17 @@
                          </div>
                          </a>
                      </div>
-                     <div class="col-6 p-2">
-                         <a href="{{ route('admin.profile') }}" style="text-decoration:none">
+{{--                     <div class="col-6 p-2">--}}
+{{--                         <a href="{{ route('admin.profile') }}" style="text-decoration:none">--}}
 
-                         <div class="card">
-                             <div class="text-center">
-                                 <img src="{{ asset('images/orders.png') }}" class="card-img-top" style="width: 100px;height: 100px;" alt="home">
-                                     <h4 class="p-4 card-body" style="color: #ffff;background-color: #055160">{{ __('عرض الاوردرات') }}</h4>
-                             </div>
-                         </div>
-                         </a>
-                     </div>
+{{--                         <div class="card">--}}
+{{--                             <div class="text-center">--}}
+{{--                                 <img src="{{ asset('images/orders.png') }}" class="card-img-top" style="width: 100px;height: 100px;" alt="home">--}}
+{{--                                     <h4 class="p-4 card-body" style="color: #ffff;background-color: #055160">{{ __('عرض الاوردرات') }}</h4>--}}
+{{--                             </div>--}}
+{{--                         </div>--}}
+{{--                         </a>--}}
+{{--                     </div>--}}
              </div>
         </div>
 

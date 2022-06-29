@@ -10,7 +10,16 @@ class ProductController extends Controller
 {
 
     function list(){
-        return view('product.list');
+        $data = array(
+            'list'=> DB::table('products')
+                    ->join('categories', 'products.category_id', '=', 'categories.id')
+                    ->select('products.*','categories.category_name')
+                    ->get()
+
+        );
+        return view('product.list',$data);
+
+
     }
     function create(){
         $data = array(

@@ -16,27 +16,26 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                    <table class="table table-hover">
-                        <thead class="text-center">
-                        <th>تعديل او حذف</th>
-                        <th>صورة الصنف</th>
-                        <th>اسم الصنف</th>
-                        </thead>
-                        <tbody>
+                <div class="container">
+                    <div class="row">
                         @foreach($list as $item)
-                        <tr class="text-center">
-                            <td>
-                                <a href="" class="btn btn-danger">حذف</a>
-
-                                <a href="" class="btn btn-success">تعديل</a>
-                            </td>
-
-                            <td><img src="{{ asset('upload/categories/'.$item->image)}}" class="img-thumbnail" style="width: 100px;height: 100px;" alt="category_image"></td>
-                            <td><h5>{{ $item->name }}</h5></td>
-                        </tr>
+                            <div class="col-6 p-2">
+                                <div class="card">
+                                    <div class="text-center">
+                                        <img src="{{ asset('upload/categories/'.$item->image)}}" class="card-img-top" style="width: 100%;height: 100%;" alt="صوره الصنف غير متوفره">
+                                        <div class="card-body">
+                                            <h4>{{ $item->category_name }}</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="{{ url('admin/delete-category').'/'.$item->id }}" class="btn btn-danger">حذف</a>
+                                            <a href="{{ url('admin/update-category').'/'.$item->id }}" class="btn btn-success">تعديل</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         @endforeach
-                        </tbody>
-                    </table>
+                    </div>
+                </div>
 
                     </div>
                 </div>
@@ -91,7 +90,7 @@
                                     <label for="name" class="col-md-4 col-form-label text-lg-end">{{ __('اختر صورة الصنف') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image"  accept="image/png, image/gif, image/jpeg" required >
+                                        <input id="name" type="file" class="form-control @error('image') is-invalid @enderror" name="image"  accept="image/png, image/gif, image/jpeg" required >
 
                                         @error('image')
                                         <span class="invalid-feedback" role="alert">

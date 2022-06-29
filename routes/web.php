@@ -31,8 +31,9 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth','PreventBackHis
     Route::get('update-product/{id}',[ProductController::class,'update'])->name('product.update');
     Route::get('all-categories',[CategoryController::class,'list'])->name('category.list');
     Route::post('add-category',[CategoryController::class,'create'])->name('category.add');
-    Route::get('delete-category/{id}',[CategoryController::class,'delete'])->name('category.delete');
-    Route::get('update-category/{id}',[CategoryController::class,'update'])->name('category.update');
+    Route::get('delete-category/{id}',[CategoryController::class,'delete']);
+    Route::get('update-category/{id}',[CategoryController::class,'formOfUpdate']);
+    Route::put('update-category/{id}',[CategoryController::class,'update']);
 });
 
 
