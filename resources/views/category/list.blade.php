@@ -70,7 +70,7 @@
                                 {{ Session::get('fail') }}
                             </div>
                         @endif
-                            <form action="add-category" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('category.add') }}" method="post" enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="row mb-3">
@@ -91,7 +91,7 @@
                                     <label for="name" class="col-md-4 col-form-label text-lg-end">{{ __('اختر صورة الصنف') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="file" class="form-control @error('image') is-invalid @enderror" name="image"  accept="image/png, image/gif, image/jpeg" required >
+                                        <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image"  accept="image/png, image/gif, image/jpeg" required >
 
                                         @error('image')
                                         <span class="invalid-feedback" role="alert">

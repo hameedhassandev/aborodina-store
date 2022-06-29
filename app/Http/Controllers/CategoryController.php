@@ -15,19 +15,6 @@ class CategoryController extends Controller
         return view('category.list', $data);
     }
     function create(Request $request){
-//        $request->validate([
-//            'name'=>'required',
-//            'image'=> 'required'
-//
-//        ]);
-//        $query = DB::table('categories')->insert([
-//            'name' => $request->input('name'),
-//        ]);
-//        if ($query){
-//            return back()->with('success','تم اضافة الصنف بتجاح');
-//        }else{
-//            return back()->with('fail','حدث خطأ لم يتم اضافة الصنف');
-//        }
         $category = new Category();
         $category->name = $request->input('name');
         if ($request->hasFile('image')){
@@ -36,6 +23,8 @@ class CategoryController extends Controller
             $filename = time().'.'.$extension;
             $file->move('upload/categories/',$filename);
             $category->image = $filename;
+        }else{
+            $category->image = 'null';
         }
         $category->save();
         if (!empty($category)){

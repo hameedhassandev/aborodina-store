@@ -12,7 +12,7 @@ class Product extends Model
     protected $fillable = [
         'name',
         'price',
-        'category',
+        'category_id',
         'image'
     ];
     public $timestamps = false;
